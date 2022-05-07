@@ -1,0 +1,43 @@
+img {
+  display: flex;
+  align-self : center;
+}
+
+body {
+  display : flex;
+  background-color : lightblue;
+  color: black;
+  font-family : "Open Sans";
+  flex-direction : row-reverse;
+}
+p {
+  text-align : justify;
+  text-justify : inter-word;
+  width : 85%;
+}
+#navbar header {
+  text-align : justify;
+  text-justify : inter-word; 
+  width : 85%;
+}
+
+.nav-link {
+  display : flex;
+  flex-wrap : wrap;
+  flex-direction : column;
+  text-decoration : none;
+  color : red;
+  height : 50px;
+  margin-top : 30px;
+}
+
+@media (max-width : 500px) {
+  .main-section {
+  align-items : center;
+  width : 50%;
+  margin-left: 50px;
+  }
+  #navbar {
+    display : none;
+  }
+}

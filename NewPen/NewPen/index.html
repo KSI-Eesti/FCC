@@ -1,0 +1,183 @@
+<!-- 
+
+Hello Camper!
+
+Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding! 
+
+- The freeCodeCamp Team 
+
+-->
+
+<html>
+  <head>
+    <title>Swift Documentation</title>
+    <meta charset = "UTF-8">
+    <link rel="stylesheet" href="style.css" type="text/css">
+  </head>
+  <body>
+    <main id = "main-doc">
+      <section class = "main-section" id ="Introduction_to_Swift">
+        <header>
+          <h1>Introduction to Swift</h1>
+        </header>
+          <p>
+          Swift is a fantastic way to write software, whether it’s for phones, desktops, servers, or anything else that runs code. It’s a safe, fast, and interactive programming language that combines the best in modern language thinking with wisdom from the wider Apple engineering culture and the diverse contributions from its open-source community. The compiler is optimized for performance and the language is optimized for development, without compromising on either.
+        </p>
+          <p>
+            Swift is friendly to new programmers. It’s an industrial-quality programming language that’s as expressive and enjoyable as a scripting language. Writing Swift code in a playground lets you experiment with code and see the results immediately, without the overhead of building and running an app.
+          </p>
+      </section>
+      <section class = "main-section" id = "The_Basics">
+        <header>
+        <h1> The Basics </h1>
+         </header>
+       <p> Swift is a new programming language for iOS, macOS, watchOS, and tvOS app development. Nonetheless, many parts of Swift will be familiar from your experience of developing in C and Objective-C. </p>
+
+<p> Swift provides its own versions of all fundamental C and Objective-C types, including Int for integers, Double and Float for floating-point values, Bool for Boolean values, and String for textual data. Swift also provides powerful versions of the three primary collection types, Array, Set, and Dictionary, as described in Collection Types. </p>
+
+<p> Like C, Swift uses variables to store and refer to values by an identifying name. Swift also makes extensive use of variables whose values can’t be changed. These are known as constants, and are much more powerful than constants in C. Constants are used throughout Swift to make code safer and clearer in intent when you work with values that don’t need to change. </p>
+
+<p> In addition to familiar types, Swift introduces advanced types not found in Objective-C, such as tuples. Tuples enable you to create and pass around groupings of values. You can use a tuple to return multiple values from a function as a single compound value. </p>
+
+<p> Swift also introduces optional types, which handle the absence of a value. Optionals say either “there is a value, and it equals x” or “there isn’t a value at all”. Using optionals is similar to using nil with pointers in Objective-C, but they work for any type, not just classes. Not only are optionals safer and more expressive than nil pointers in Objective-C, they’re at the heart of many of Swift’s most powerful features. </p>
+
+<p> Swift is a type-safe language, which means the language helps you to be clear about the types of values your code can work with. If part of your code requires a String, type safety prevents you from passing it an Int by mistake. Likewise, type safety prevents you from accidentally passing an optional String to a piece of code that requires a non-optional String. Type safety helps you catch and fix errors as early as possible in the development process. </p>
+      </section>
+      <section class = "main-section" id ="Constants_and_Variables">
+        <header>
+          <h1>Constants and Variables</h1>
+        </header>  
+         <p> Constants and variables associate a name (such as maximumNumberOfLoginAttempts or welcomeMessage) with a value of a particular type (such as the number 10 or the string "Hello"). The value of a constant can’t be changed once it’s set, whereas a variable can be set to a different value in the future. </p>
+          <h3>Declaring Constants and Variables</h3>
+          <p>Constants and variables must be declared before they’re used. You declare constants with the let keyword and variables with the var keyword. Here’s an example of how constants and variables can be used to track the number of login attempts a user has made:</p>
+          <code>
+            let maximumNumberOfLoginAttempts = 10
+            <br>
+var currentLoginAttempt = 0
+          </code>
+          <p>
+            This code can be read as:
+
+“Declare a new constant called maximumNumberOfLoginAttempts, and give it a value of 10. Then, declare a new variable called currentLoginAttempt, and give it an initial value of 0.” </p>
+
+<p> In this example, the maximum number of allowed login attempts is declared as a constant, because the maximum value never changes. The current login attempt counter is declared as a variable, because this value must be incremented after each failed login attempt. </p>
+
+<p> You can declare multiple constants or multiple variables on a single line, separated by commas: </p>
+          <code>
+            var x = 0.0, y = 0.0, z = 0.0
+          </code>
+          <h3> Type Annotations </h3>
+          <p>
+You can provide a type annotation when you declare a constant or variable, to be clear about the kind of values the constant or variable can store. Write a type annotation by placing a colon after the constant or variable name, followed by a space, followed by the name of the type to use.
+          </p>
+<p>
+This example provides a type annotation for a variable called welcomeMessage, to indicate that the variable can store String values:
+          </p>
+            <code>
+    var welcomeMessage: String
+  </code>
+          </p>
+      </section>
+    <section class = "main-section" id ="Basic_Operators">
+      <header>
+        <h1>Basic Operators</h1>
+      </header>
+        <p>
+          An operator is a special symbol or phrase that you use to check, change, or combine values. For example, the addition operator (+) adds two numbers, as in let i = 1 + 2, and the logical AND operator (&&) combines two Boolean values, as in if enteredDoorCode && passedRetinaScan.
+        </p>
+
+        <p>
+Swift supports the operators you may already know from languages like C, and improves several capabilities to eliminate common coding errors. The assignment operator (=) doesn’t return a value, to prevent it from being mistakenly used when the equal to operator (==) is intended. Arithmetic operators (+, -, *, /, % and so forth) detect and disallow value overflow, to avoid unexpected results when working with numbers that become larger or smaller than the allowed value range of the type that stores them. You can opt in to value overflow behavior by using Swift’s overflow operators, as described in Overflow Operators. </p>
+
+<p> Swift also provides range operators that aren’t found in C, such as a..b and a...b, as a shortcut for expressing a range of values. </p>
+
+<p> This chapter describes the common operators in Swift. Advanced Operators covers Swift’s advanced operators, and describes how to define your own custom operators and implement the standard operators for your own custom types. </p>
+        </p>
+      <h3>Terminology</h3>
+      <p>Operators are unary, binary, or ternary: </p>
+
+<p> Unary operators operate on a single target (such as -a). Unary prefix operators appear immediately before their target (such as !b), and unary postfix operators appear immediately after their target (such as c!).
+Binary operators operate on two targets (such as 2 + 3) and are infix because they appear in between their two targets.
+Ternary operators operate on three targets. Like C, Swift has only one ternary operator, the ternary conditional operator (a ? b : c). </p>
+      <p>
+The values that operators affect are operands. In the expression 1 + 2, the + symbol is an infix operator and its two operands are the values 1 and 2. </p>
+      
+      <h3>Assignment Operator</h3>
+      
+      <p> The assignment operator (a = b) initializes or updates the value of a with the value of b: </p>
+
+<code>
+  let b = 10
+var a = 5
+a = b
+// a is now equal to 10
+      </code>
+      <p>
+If the right side of the assignment is a tuple with multiple values, its elements can be decomposed into multiple constants or variables at once: </p>
+
+      <code>let (x, y) = (1, 2)
+// x is equal to 1, and y is equal to 2
+      </code>
+<p> Unlike the assignment operator in C and Objective-C, the assignment operator in Swift doesn’t itself return a value. The following statement isn’t valid: </p>
+
+if x = y {
+    // This isn't valid, because x = y doesn't return a value.
+}
+This feature prevents the assignment operator (=) from being used by accident when the equal to operator (==) is actually intended. By making if x = y invalid, Swift helps you to avoid these kinds of errors in your code.
+
+      <h3>Arithmetic Operators</h3>
+      <p>Swift supports the four standard arithmetic operators for all number types:</p>
+<ul>
+<li>Addition (+)</li>
+<li>Subtraction (-)</li>
+<li>Multiplication (*)</li>
+<li>Division (/)</li>
+<li>Remainder (%)</li>
+  </ul>
+      <code>
+1 + 2       // equals 3<br>
+5 - 3       // equals 2<br>
+2 * 3       // equals 6<br>
+10.0 / 2.5  // equals 4.0<br>
+      </code>
+
+      <p>Unlike the arithmetic operators in C and Objective-C, the Swift arithmetic operators don’t allow values to overflow by default. You can opt in to value overflow behavior by using Swift’s overflow operators (such as a &+ b). See Overflow Operators.</p>
+
+      <p>The addition operator is also supported for String concatenation:</p>
+
+      <code>"hello, " + "world"  // equals "hello, world" </code>
+      <h3>Remainder Operator</h3>
+The remainder operator (a % b) works out how many multiples of b will fit inside a and returns the value that’s left over (known as the remainder).
+
+      <h4>NOTE</h4>
+
+<p>The remainder operator (%) is also known as a modulo operator in other languages. However, its behavior in Swift for negative numbers means that, strictly speaking, it’s a remainder rather than a modulo operation.</p>
+
+<p>Here’s how the remainder operator works. To calculate 9 % 4, you first work out how many 4s will fit inside 9: </p>
+      <img src = "https://docs.swift.org/swift-book/_images/remainderInteger_2x.png" alt = "remainder operation">
+    </section>
+  <section class = "main-section" id="Strings_and_Characters">
+    <header>
+      <h1>Strings and Characters</h1>
+    </header>
+      <p>You can include predefined String values within your code as string literals. A string literal is a sequence of characters surrounded by double quotation marks (").</p>
+
+      <p>Use a string literal as an initial value for a constant or variable:</p>
+
+      <code>let someString = "Some string literal value"</code>
+      <p>
+Note that Swift infers a type of String for the someString constant because it’s initialized with a string literal value.
+      </p>
+    
+  </section>
+    </main>
+<nav id = "navbar">
+  <header>Swift is a fantastic way to write software, whether it’s for phones, desktops, servers, or anything else that runs code. It’s a safe, fast, and interactive programming language that combines the best in modern language thinking with wisdom from the wider Apple engineering culture and the diverse contributions from its open-source community.</header>
+<a href = "#Introduction_to_Swift"  class = "nav-link">Introduction to Swift</a>
+    <a href = "#The_Basics"  class = "nav-link">The Basics</a>
+    <a href = "#Constants_and_Variables"  class = "nav-link">Constants and Variables</a>
+    <a href = "#Basic_Operators"  class = "nav-link">Basic Operators</a>
+    <a href = "#Strings_and_Characters" class = "nav-link">Strings and Characters</a>
+</nav>
+  </body>
+</html>

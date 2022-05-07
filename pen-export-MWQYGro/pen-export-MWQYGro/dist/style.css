@@ -1,0 +1,24 @@
+body {
+  background-color: dodgerblue;
+}
+h1, #description {
+  color : white;
+  text-align : center;
+}
+#survey-form {
+  text-align : center;
+  border: 1px solid #090433;
+  border-radius : 5px;
+  margin-left : 350px;
+  margin-right : 350px;
+  padding-top : 20px;
+  padding-bottom : 20px;
+  background-color : #0904ee;
+  color : white;
+}
+#submit {
+  background-color : forestgreen;
+  color : white;
+  width : 300px;
+  height : 30px;
+}
